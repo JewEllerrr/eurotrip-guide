@@ -1,0 +1,289 @@
+:root {
+    --bg: #f7f8fb;
+    --card: #ffffff;
+    --ink: #0f172a;
+    --muted: #5b6b85;
+    --brand: rgba(105, 132, 227, 0.78);
+    --ring: #e5e7eb;
+    --chip: #f1f5f9;
+    --chip-border: #e2e8f0;
+    --danger: #ef4444;
+
+    --focus: #6366f1;
+    --shadow: rgba(2, 6, 23, .06);
+    --shadow-hover: rgba(2, 6, 23, .10);
+}
+
+* {
+    box-sizing: border-box
+}
+
+html, body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+    background: linear-gradient(180deg, #fbfcff 0%, #f3f5fb 100%);
+    color: var(--ink);
+}
+
+.wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 24px 20px
+}
+
+header h1 {
+    font-size: clamp(26px, 3.2vw, 40px);
+    line-height: 1.12;
+    margin: 0
+}
+
+header p {
+    margin: 8px 0 0;
+    color: var(--muted)
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px
+}
+
+
+.card { position: relative; z-index: 1; overflow: visible; }
+.leaflet-container { z-index: 0; }
+
+
+.chip {
+    padding: 6px 10px;
+    border: 1px solid var(--chip-border);
+    border-radius: 999px;
+    background: var(--chip);
+    font-size: 12px;
+    color: #334155
+}
+
+img.photo {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+    margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+}
+
+/* NAV */
+nav.grid {
+    position: sticky;
+    top: 0;
+    z-index: 20; /* липкая навигация */
+    display: grid;
+    gap: 10px;
+    margin-top: 18px;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    background: linear-gradient(180deg, rgba(251, 252, 255, .96) 0%, rgba(243, 245, 251, .96) 100%);
+    backdrop-filter: saturate(1.1) blur(6px);
+    padding-bottom: 6px;
+}
+
+@media (max-width: 960px) {
+    nav.grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    nav.grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    background: var(--card);
+    border-radius: 14px;
+    padding: 14px 10px;
+    text-align: center;
+    box-shadow: 0 8px 28px var(--shadow);
+    border: 1px solid var(--ring);
+    transition: .2s transform ease, .2s box-shadow ease, .2s background ease;
+    display: block;
+    outline: none;
+}
+
+nav a small {
+    display: block;
+    color: var(--muted);
+    margin-top: 4px
+}
+
+nav a:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 30px var(--shadow-hover)
+}
+
+nav a:focus-visible {
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, .25), 0 8px 28px var(--shadow);
+}
+
+nav a.active {
+    background: #111827;
+    color: #fff;
+}
+
+nav a.active small {
+    color: #cbd5e1
+}
+
+/* LAYOUT */
+.grid {
+    display: grid;
+    gap: 16px;
+    margin-top: 18px;
+    grid-template-columns: 2fr 1fr;
+}
+
+@media (max-width: 960px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 8px 28px var(--shadow);
+    border: 1px solid var(--ring);
+}
+
+.title {
+    font-weight: 800;
+    font-size: 20px;
+    margin: 0 0 8px
+}
+
+.muted {
+    color: var(--muted)
+}
+
+.list {
+    margin: 8px 0 0;
+    padding-left: 18px
+}
+
+.list li {
+    margin: 6px 0
+}
+
+/* ROUTE */
+.route ol {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0
+}
+
+.route li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 10px 0
+}
+
+.num {
+    width: 26px;
+    height: 26px;
+    border-radius: 999px;
+    background: var(--danger);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex: 0 0 26px;
+    box-shadow: 0 6px 16px rgba(239, 68, 68, .35);
+    font-size: 13px;
+    line-height: 1;
+}
+
+.num.letter {
+    background: var(--brand);
+    box-shadow: 0 6px 16px rgba(105, 132, 227, .35);
+}
+
+[id^="map-day"] {
+    height: clamp(300px, 42vh, 420px);
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--ring);
+    margin-top: 8px;
+}
+
+#map-day2-bled, #map-day2-venice, #map-day3-venice {
+    height: 320px;
+}
+
+#map-day1, #map-day3,
+#map-day4-rome, #map-day5-center, #map-day5-vatican,
+#map-day6-vienna, #map-day6-munich,
+#map-day7-amsterdam, #map-day8-paris, #map-day8-lyon {
+    height: clamp(340px, 48vh, 420px);
+}
+
+.map-hint {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 8px
+}
+
+/* SECTION VISIBILITY */
+main > section {
+    display: none;
+}
+
+main > section.active {
+    display: block;
+}
+
+/* DAY TOTALS */
+.totals {
+    display: grid;
+    gap: 8px;
+}
+
+.totals-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 6px 10px;
+    border: 1px solid var(--ring);
+    border-radius: 10px;
+    background: #fff;
+}
+
+.totals-row .label {
+    color: var(--muted);
+}
+
+.totals-row.total {
+    background: #111827;
+    color: #fff;
+    font-weight: 800;
+}
+
+.totals small {
+    color: var(--muted);
+    display: block;
+    margin-top: 6px
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}

@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Евротур — Путеводитель</title>
+    <link rel="stylesheet" href="style.css"/>
+
+    <!-- Leaflet (map) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <h1>Евротур — путеводитель</h1>
+        <p>Маршрут: Черногория → Словения → Италия (Венеция, Флоренция, Рим) → Австрия → Германия → Нидерланды → Франция
+            (Париж, Лион)</p>
+        <div class="chips">
+            <span class="chip">Питание ~ €45-60/чел/день</span>
+            <span class="chip">Бюджет до €4000 / двое</span>
+            <span class="chip">Март–апрель 2026</span>
+            <a href="#summary" data-day="summary" class="chip" style="cursor:pointer">Суммарные затраты</a>
+        </div>
+    </header>
+
+    <!-- NAV -->
+    <nav class="grid" aria-label="Навигация по дням">
+        <a href="#day1" data-day="day1" class="active">День 1<small>Подгорица → Любляна</small></a>
+        <a href="#day2" data-day="day2">День 2<small>Любляна → Блед → Венеция</small></a>
+        <a href="#day3" data-day="day3">День 3<small>Венеция → Флоренция</small></a>
+        <a href="#day4" data-day="day4">День 4<small>Флоренция → Рим</small></a>
+        <a href="#day5" data-day="day5">День 5<small>Рим → Вена</small></a>
+        <a href="#day6" data-day="day6">День 6<small>Вена → Мюнхен → Амстердам</small></a>
+        <a href="#day7" data-day="day7">День 7<small>Амстердам → Париж</small></a>
+        <a href="#day8" data-day="day8">День 8<small>Париж → Лион</small></a>
+    </nav>
+
+
+    <!-- CONTENT -->
+    <main>
+        <!-- DAY 1 -->
+        <section id="day1" class="active">
+            <div class="grid">
+                <div>
+                    <div class="card">
+                        <h2 class="title">День 1 — Черногория (Подгорица) → Словения (Любляна)</h2>
+                        <ul class="list muted">
+                            <li><strong>27 марта 2026 (пятница)</strong></li>
+                            <li>✈️ Подгорица 14:25 → Любляна 15:30 (~1,5 ч, ~ €80/чел = €160 на двоих)</li>
+                            <img src="images/tgd_lju.png" class="photo" alt="">
+                            <li>Хостел: <strong>ibis Styles Ljubljana The Fuzzy Log</strong> — €38 + €6 tax = €44
+                                <br>Double Bed Cabin with Shared Bathroom — Upper Level
+                                <br>Адрес: 9 Miklošičeva cesta, Ljubljana —
+                                <a class="link" href="https://maps.app.goo.gl/6Ue6EdKzhYpDohQ87" target="_blank"
+                                   rel="noreferrer">Google Maps</a>
+                                <img src="images/hotels_1.png" class="photo" alt="">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card route">
+                        <h3 class="title">Пешеходный маршрут (≈ 4–5 км, 3–4 часа)</h3>
+                        <ol>
+                            <li><span class="num">1</span>
+                                <div><strong>Хостел (Miklošičeva 9)</strong></div>
+                            </li>
+                            <li><span class="num">2</span>
+                                <div><strong>Площадь Прешерна</strong> — 5 мин пешком. Памятник поэту, вид на Тройной
+                                    мост.
+                                </div>
+                            </li>
+                            <li><span class="num">3</span>
+                                <div><strong>Тройной мост</strong> — переход к старому городу; фото-точка.</div>
+                            </li>
+                            <li><span class="num">4</span>
+                                <div><strong>Центральный рынок и Мост Драконов</strong> — свежие фрукты/выпечка; символ
+                                    города.
+                                </div>
+                            </li>
+                            <li><span class="num">5</span>
+                                <div><strong>Фуникулёр к замку</strong> — подъём 15–20 мин или фуникулёр (~€2,20);
+                                    смотровая площадка.
+                                </div>
+                            </li>
+                            <li><span class="num">6</span>
+                                <div><strong>Люблянский замок</strong> — подъём 15–20 мин или фуникулёр (~€2,20);
+                                    смотровая площадка.
+                                </div>
+                            </li>
+                            <li><span class="num">7</span>
+                                <div><strong>Старый город</strong> — Mestni trg, фонтан Роба, террасы кафе.</div>
+                            </li>
+                            <li><span class="num">8</span>
+                                <div><strong>Набережная Любляницы</strong> — кафе, бары, художники, вечером атмосферно.
+                                </div>
+                            </li>
+                            <li><span class="num">9</span>
+                                <div><strong>Парк Тиволи</strong> — большой зелёный парк.</div>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="title">Где поесть (≈ €90-120/двоих за день)</h3>
+                        <ul class="list muted">
+                            <li><strong>Gostilna Sokol</strong> — štruklji, jota, суп в хлебе. (~€40–55)</li>
+                            <li><strong>Druga Violina</strong> — национальные блюда, уютно. (~€30–40)</li>
+                            <li><strong>Cafetino</strong> — отличный кофе в центре. (~€15–20)</li>
+                            <li><strong>Central Market Street Food</strong> — быстрые перекусы, свежие продукты.
+                                (~€20–25)
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="title">Итоги дня — расходы (на двоих)</h3>
+                        <div class="totals">
+                            <div class="totals-row"><span
+                                    class="label">Перелёт Podgorica → Ljubljana</span><span>€160</span></div>
+                            <div class="totals-row"><span
+                                    class="label">Проживание: Fuzzy Log (1 ночь)</span><span>€44</span></div>
+                            <div class="totals-row"><span
+                                    class="label">Питание (~€45-60/чел/день)</span><span>€90-120</span></div>
+                            <div class="totals-row"><span class="label">Фуникулёр к замку (по желанию)</span><span>~€4.40</span>
+                            </div>
+                            <div class="totals-row"><span class="label">Непредвиденные расходы</span><span>€0-100</span>
+                            </div>
+                            <div class="totals-row total"><span>Итого за день</span><span>≈ €294 – 428</span></div>
+                            <small>Примечание: последний пункт опционален — зависит от выбора
+                                (пешком/фуникулёр).</small>
+                        </div>
+                    </div>
+                </div>
+
+                <aside>
+                    <div class="card">
+                        <h3 class="title">Карта (интерактив)</h3>
+                        <div id="map-day1"></div>
+                        <p class="map-hint">Красные — точки маршрута, зелёные — еда. Увеличивайте и кликайте по
+                            меткам.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="title">Быстрые ссылки</h3>
+                        <ul class="list muted">
+                            <li><a class="link"
+                                   href="https://www.visitljubljana.com/en/visitors/plan-your-visit/transport/"
+                                   target="_blank" rel="noreferrer">Транспорт в Любляне</a></li>
+                            <li><a class="link" href="https://www.ljubljanskigrad.si/en/" target="_blank"
+                                   rel="noreferrer">Люблянский замок</a></li>
+                            <li><a class="link" href="https://www.centralna-trznica.si/" target="_blank"
+                                   rel="noreferrer">Центральный рынок</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- DAY 2 -->
+        <section id="day2">
+            <div class="grid">
+                <div>
+                    <div class="card">
+                        <h2 class="title">День 2 — Любляна → Блед → Венеция (Местре)</h2>
+                        <ul class="list muted">
+                            <li><strong>28 марта 2026 (суббота)</strong></li>
+                            <li>🚌 Любляна → Блед (≈ 1 ч 15 мин, ~€6–8/чел = €12–16 на двоих)</li>
+                            <img src="images/bus_lju_bled.png" class="photo" alt="">
+                            <li>🚆 Блед → Любляна → Venezia Mestre (≈ 3,5 ч, ~€60–80/двое)</li>
+                            <li>Отель/хостел в Mestre: ≈ €100</li>
+                            <img src="images/hotels_2.png" class="photo" alt="">
+                        </ul>
+                    </div>
+
+                    <div class="card route">
+                        <h3 class="title">Примерный маршрут дня</h3>
+                        <ul class="list muted">
+                            <li><strong>Чекаут из Fuzzy Log</strong><br><span class="muted">Вещи можно оставить в luggage room.</span>
+                            </li>
+                            <li><strong>Перекус рядом</strong> (например, Cafetino)<br><span class="muted">Кофе + круассан/сендвич</span>
+                                <span>~€12–18</span></li>
+                            <li><strong>Пешком до Ljubljana Bus Station</strong><br><span class="muted">≈600 м от хостела</span>
+                            </li>
+                            <li><strong>Билеты/посадка на автобус</strong><br><span>~€6–8/чел</span></li>
+                            <li><strong>Автобус Ljubljana → Bled</strong><br><span class="muted">≈1 ч 15 мин</span></li>
+                            <li><strong>Прогулка по озеру Bled</strong><br><span class="muted">Фото-стопы, 3–4 км</span>
+                            </li>
+                            <li><strong>Лодка на остров Bled</strong><br><span>~€36/двое</span></li>
+                            <li><strong>Bled Castle</strong><br><span>~€30/двое</span> <span class="muted">панорама озера</span>
+                            </li>
+                            <li><strong>Десерт Kremšnita</strong><br><span>~€12–18</span></li>
+                            <li><strong>Автобус обратно в Любляну</strong><br><span class="muted">≈1 ч 15 мин</span>
+                            </li>
+                            <li><strong>Забрать вещи в хостеле</strong><br><span>~€8–12 (перекус to-go)</span></li>
+                            <li><strong>Дорога в Италию</strong> (поезд/автобус Ljubljana → Mestre ≈4 ч)<br><span>~€60–80/двое</span>
+                            </li>
+                            <li><strong>Заселение в Mestre</strong><br><span>~€100</span></li>
+                            <li><strong>Ужин в Местре</strong> (пицца/паста)<br><span>~€30–45</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="title">Где поесть (≈ €90-120/двоих за день)</h3>
+                        <ul class="list muted">
+                            <li><strong>Завтрак (Любляна)</strong>: Cafetino или другое кафе рядом с хостелом — кофе +
+                                круассан/сендвич (~€12–18).
+                            </li>
+                            <li><strong>Обед (Блед)</strong>: ресторан/кафе у озера — основное блюдо + напитки
+                                (~€30–45); или лёгкий вариант — кофе и Kremšnita (~€12–18).
+                            </li>
+                            <li><strong>Ужин (Местре)</strong>: траттории у вокзала — пицца/паста + бокал вина
+                                (~€30–45).
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="title">Итоги дня — расходы (на двоих)</h3>
+                        <div class="totals">
+                            <div class="totals-row"><span
+                                    class="label">Ljubljana ↔ Bled (автобус)</span><span>~€28</span></div>
+                            <div class="totals-row"><span class="label">Лодка на остров Блед</span><span>~€36</span>
+                            </div>
+                            <div class="totals-row"><span class="label">Замок Блед (вход)</span><span>~€30</span></div>
+                            <div class="totals-row"><span
+                                    class="label">Питание (~€45-60/чел/день)</span><span>≈ €90-120</span></div>
+                            <div class="totals-row"><span
+                                    class="label">Поезд/автобус в Италию (Ljubljana → Mestre)</span><span>~€60–80</span>
+                            </div>
+                            <div class="totals-row"><span
+                                    class="label">Ночлег в Mestre (1 ночь)</span><span>~€100</span></div>
+                            <div class="totals-row"><span class="label">Непредвиденные расходы</span><span>€0-100</span>
+                            </div>
+                            <div class="totals-row total"><span>Итого за день</span><span>≈ €344 – 494</span></div>
+                            <small>Примечание: стоимость питания усреднена (≈ €45–60 на человека в день), фактический
+                                чек зависит от выбора кафе.</small>
+                        </div>
+                    </div>
+                </div>
+
+                <aside>
+                    <div class="card">
+                        <h3 class="title">Карта: Блед</h3>
+                        <div id="map-day2-bled"></div>
+                        <p class="map-hint">Точки: автовокзал Блед, озеро, остров, замок.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="title">Карта: Венеция</h3>
+                        <div id="map-day2-venice"></div>
+                        <p class="map-hint">Точки: Mestre FS, Piazzale Roma, Риальто, Сан-Марко.</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- DAY 3 -->
+        <section id="day3">
+            <div class="grid">
+                <div>
+                    <div class="card">
+                        <h2 class="title">День 3 — Венеция → Флоренция</h2>
+                        <ul class="list muted">
+                            <li><strong>29 марта 2026 (воскресенье)</strong></li>
+                            <li>🚆 Venezia Mestre → Venezia Santa Lucia (утром, ~10 мин, ~€3–5/чел) — прогулка по
+                                острову
+                            </li>
+                            <img src="images/train_3_0.png" class="photo" alt="">
+                            <li>🚆 Venezia Santa Lucia → Firenze S. M. Novella (≈ 2–3 ч, ~€60–100/двое)</li>
+                            <img src="images/train_3.png" class="photo" alt="">
+                            <li>🏨 Отель/хостел во Флоренции: ≈ €120</li>
+                            <img src="images/hotels_3.png" class="photo" alt="">
+                        </ul>
+                    </div>
+
+
+                    <div class="card route">
+                        <h3 class="title">Прогулка по Венеции утром (≈ 3–4 км, 2–3 часа)</h3>
+                        <ol>
+                            <li><span class="num">1</span>
+                                <div><strong>Stazione Venezia Santa Lucia</strong> — прибытие/сдача багажа в камеру
+                                    хранения.
+                                </div>
+                            </li>
+                            <li><span class="num">2</span>
+                                <div><strong>Santa Croce</strong> — прогулка по тихим улочкам района.</div>
+                            </li>
+                            <li><span class="num">3</span>
+                                <div><strong>Ponte di Rialto</strong> — знаменитый мост и рынок рядом.</div>
+                            </li>
+                            <li><span class="num">4</span>
+                                <div><strong>Piazza San Marco</strong> — площадь, собор, колокольня (по желанию).</div>
+                            </li>
+                            <li><span class="num">5</span>
+                                <div><strong>Возврат к вокзалу</strong> — пешком или вапоретто №1/2 от San Marco до
+                                    Santa Lucia.
+                                </div>
+                            </li>
+                            <li><span class="num"></span>
+                                <div><strong>Поезд Venezia Santa Lucia → Firenze S. M. Novella</strong> (≈ 2–3 ч,
+                                    ~€60–100/двое).
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="card route">
+                        <h3 class="title">Маршрут по центру Флоренции (≈ 5–6 км, 4–6 часов)</h3>
+                        <ol>
+                            <li><span class="num">1</span>
+                                <div><strong>Stazione SMN (вокзал)</strong> — оставить вещи (luggage storage) при
+                                    необходимости.
+                                </div>
+                            </li>
+                            <li><span class="num">2</span>
+                                <div><strong>Mercato Centrale</strong> — кофе/завтрак, фудкорт на 2-м этаже.</div>
+                            </li>
+                            <li><span class="num">3</span>
+                                <div><strong>Duomo (Santa Maria del Fiore)</strong> — собор, бронь на купол по желанию.
+                                </div>
+                            </li>
+                            <li><span class="num">4</span>
+                                <div><strong>Piazza della Signoria</strong> — Лоджия Ланци, Палаццо Веккьо.</div>
+                            </li>
+                            <li><span class="num">5</span>
+                                <div><strong>Basilica di Santa Croce</strong> — базилика и площадь перед ней.</div>
+                            </li>
+                            <li><span class="num">6</span>
+                                <div><strong>Уффици</strong> — музей (бронь билетов заранее желательно).</div>
+                            </li>
+                            <li><span class="num">7</span>
+                                <div><strong>Ponte Vecchio</strong> — виды на Арно, ювелирные лавки.</div>
+                            </li>
+                            <li><span class="num">8</span>
+                                <div><strong>Ольтрарно</strong> — узкие улочки и траттории (хорошее место на ужин).
+                                </div>
+                            </li>
+                            <li><span class="num">9</span>
+                                <div><strong>Piazzale Michelangelo</strong> — подъём на закат, панорама города.</div>
+                            </li>
+                        </ol>
+                    </div>
+
+
+                    <div class="card">
+                        <h3 class="title">Где поесть (≈ €90–120/двоих за день)</h3>
+                        <ul class="list muted">
+                            <li><strong>Венеция (завтрак)</strong>: Caffè del Doge или Torrefazione Cannaregio — хороший
+                                кофе и круассаны.
+                            </li>
+                            <li><strong>Флоренция (обед)</strong>: Mercato Centrale — фудкорт с большим выбором.</li>
+                            <li><strong>Флоренция (ужин)</strong>: Trattoria ZaZa или Osteria All’Antico — тосканская
+                                кухня.
+                            </li>
+                            <li><strong>Перекусы</strong>: All’Antico Vinaio (панини) и Gelateria La Carraia (мороженое
+                                вечером).
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="card">
+                        <h3 class="title">Итоги дня — расходы (на двоих)</h3>
+                        <div class="totals">
+                            <div class="totals-row"><span
+                                    class="label">Транспорт: Mestre → Venezia Santa Lucia</span><span>~€6–10</span>
+                            </div>
+                            <div class="totals-row"><span
+                                    class="label">Питание (≈ €90–120/двоих)</span><span>€90–120</span></div>
+                            <div class="totals-row"><span
+                                    class="label">Поезд Venezia → Firenze SMN</span><span>~€60–100</span></div>
+                            <div class="totals-row"><span class="label">Проживание во Флоренции (1 ночь)</span><span>~€130</span>
+                            </div>
+                            <div class="totals-row"><span class="label">Музеи (например, Уффици, Дуомо)</span><span>~€40–60</span>
+                            </div>
+                            <div class="totals-row"><span class="label">Непредвиденные расходы</span><span>€0–100</span>
+                            </div>
+                            <div class="totals-row total"><span>Итого за день</span><span>≈ €326 – 520</span></div>
+                            <small>Примечание: стоимость билетов в музеи указана усреднённо (можно бронировать заранее
+                                онлайн).</small>
+                        </div>
+                    </div>
+
+                </div>
+
+                <aside>
+                    <div class="card">
+                        <h3 class="title">Карта: утро в Венеции</h3>
+                        <div id="map-day3-venice"></div>
+                        <p class="map-hint">Маршрут: Santa Lucia → Santa Croce → Rialto → San Marco → обратно на
+                            вокзал.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="title">Карта: Флоренция</h3>
+                        <div id="map-day3"></div>
+                        <p class="map-hint">Красные — маршрутные точки, зелёные — еда.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="title">Полезные ссылки</h3>
+                        <ul class="list muted">
+                            <li><a class="link" href="https://www.uffizi.it/en/tickets" target="_blank"
+                                   rel="noreferrer">Uffizi — билеты</a></li>
+                            <li><a class="link" href="https://www.duomo.firenze.it/en/home" target="_blank"
+                                   rel="noreferrer">Duomo — билеты</a></li>
+                            <li><a class="link" href="https://www.mercatocentrale.com/en/florence/" target="_blank"
+                                   rel="noreferrer">Mercato Centrale</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- DAY 4 -->
+        <section id="day4">
+            <div class="grid">
+                <div>
+                    <div class="card">
+                        <h2 class="title">День 4 — Флоренция → Рим</h2>
+                        <ul class="list muted">
+                            <li><strong>30 марта 2026 (понедельник)</strong></li>
+                            <li>🚆 Firenze S. M. Novella → Roma Termini (Frecciarossa/Italo, ≈ 1 ч 40 мин,
+                                ~€60–100/двое)
+                            </li>
+                            <img src="images/train_4.png" class="photo" alt="">
+                            <li>🏨 Отель в Риме (центр / Трастевере / у Termini): ≈ €140 за ночь</li>
+                            <img src="images/hotels_4.png" class="photo" alt="">
+                        </ul>
+                    </div>
+
+                    <div class="card route">
+                        <h3 class="title">План дня</h3>
+                        <ul class="list muted">
+                            <li><strong>Чекаут из отеля во Флоренции</strong> — при необходимости оставь вещи в luggage
+                                room/камере хранения.
+                            </li>
+                            <li><strong>Кофе + быстрый ланч</strong> (например, Mercato Centrale) — паста/панини перед
+                                поездом.
+                            </li>
+                            <li><strong>Поезд в Рим</strong> — Firenze SMN → Roma Termini (выезжать удобно в диапазоне
+                                12:00–15:00).
+                            </li>
+                            <li><strong>Заселение</strong> — отель поближе к метро/вокзалу или в Трастевере.</li>
+                            <li><strong>Вечерняя прогулка</strong> — компактный маршрут по центру (см. ниже) + ужин.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card route">
+                        <h3 class="title">Маршрут вечерней прогулки по Риму (≈ 5–6 км, 3–4 часа)</h3>
+                        <ol>
+                            <li><span class="num">1</span>
+                                <div><strong>Отель / Roma Termini</strong> — старт.</div>
+                            </li>
+                            <li><span class="num">2</span>
+                                <div><strong>Метро B до Colosseo</strong> — фото у Колизея и Арки Константина.</div>
+                            </li>
+                            <li><span class="num">3</span>
+                                <div><strong>Via dei Fori Imperiali</strong> — виды на Форум и Палатин.</div>
+                            </li>
+                            <li><span class="num">4</span>
+                                <div><strong>Piazza Venezia</strong> — Алтарь Отечества (панорама с площадки по
+                                    желанию).
+                                </div>
+                            </li>
+                            <li><span class="num">5</span>
+                                <div><strong>Fontana di Trevi</strong> — монетка на удачу.</div>
+                            </li>
+                            <li><span class="num">6</span>
+                                <div><strong>Pantheon</strong> — осмотр снаружи в вечернем свете.</div>
+                            </li>
+                            <li><span class="num">7</span>
+                                <div><strong>Piazza Navona</strong> — барочная площадь, художники.</div>
+                            </li>
+                            <li><span class="num">8</span>
+                                <div><strong>Trastevere</strong> — ужин в траттории, узкие улочки, атмосферно.</div>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="title">Где поесть (≈ €90–120/двоих за день)</h3>
+                        <ul class="list muted">
+                            <li><strong>Завтрак (Флоренция):</strong> кофе + выпечка рядом с отелем (~€10–16).</li>
+                            <li><strong>Ланч до поезда:</strong> Mercato Centrale — паста/панини (~€20–30 на двоих).
+                            </li>
+                            <li><strong>Ужин (Рим, Трастевере):</strong> траттория — карбонара/аматричана + бокал вина
+                                (~€45–65).
+                            </li>
+                            <li><strong>Джелато:</strong> по пути к Треви/Навоне (~€6–10).</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="title">Итоги дня — расходы (на двоих)</h3>
+                        <div class="totals">
+                            <div class="totals-row"><span class="label">Поезд Firenze → Roma</span><span>~€60–100</span>
+                            </div>
+                            <div class="totals-row"><span
+                                    class="label">Проживание в Риме (1 ночь)</span><span>~€140</span></div>
+                            <div class="totals-row"><span
+                                    class="label">Питание (~€45–60/чел/день)</span><span>€90–120</span></div>
+                            <div class="totals-row"><span class="label">Транспорт в Риме (метро/автобус)</span><span>~€8–12</span>
+                            </div>
+                            <div class="totals-row"><span class="label">Камеры хранения (по необходимости)</span><span>€0–12</span>
+                            </div>
+                            <div class="totals-row"><span class="label">Непредвиденные расходы</span><span>€0–100</span>
+                            </div>
+                            <div class="totals-row total"><span>Итого за день</span><span>≈ €298 – 484</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <aside>
+                    <div class="card">
+                        <h3 class="title">Карта: Рим (вечер)</h3>
+                        <div id="map-day4-rome"></div>
+                        <p class="map-hint">Маршрут: Termini/отель → Colosseo → Via dei Fori Imperiali → Piazza Venezia
+                            → Trevi → Pantheon → Navona → Trastevere.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="title">Быстрые ссылки</h3>
+                        <ul class="list muted">
+                            <li><a class="link" href="https://www.atac.roma.it/" target="_blank" rel="noreferrer">Транспорт
+                                в Риме (ATAC)</a></li>
+                            <li><a class="link" href="https://www.coopculture.it/en/" target="_blank" rel="noreferrer">Колизей/Форум
+                                — билеты</a></li>
+                            <li><a class="link" href="https://www.museivaticani.va/" target="_blank" rel="noreferrer">Ватиканские
+                                музеи</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- DAY 5 -->
+        <section id="day5">
+            <div class="grid">
+                <div>
+                    <div class="card">
+                        <h2 class="title">День 5 — Рим (полный день) → вечерний перелет в Вену</h2>
+                        <ul class="list muted">
+                            <li><strong>31 марта 2026 (вторник)</strong></li>
+                            <li>🕘 Утро: Колизей, Форум, Палатин (вход по времени)</li>
+                            <li>🕒 День: Ватикан — Собор Святого Петра / Музеи (по желанию — заранее бронь)</li>
+                            <li>🛫 Вечер: Рим → Вена (поздний рейс)
+                                <del><em>или</em> 🚆 ночной поезд/пересадка</del>
+                            </li>
+                            <img src="images/plane_5.png" class="photo" alt="">
+                            <li>🛫 Ночь: Вена — заселение в отель</li>
+                            <img src="images/hotels_5.png" class="photo" alt="">
+                        </ul>
+                    </div>
+
+                    <div class="card route">
+                        <h3 class="title">Маршрут утра: Античный Рим (≈ 4–5 км, 3–4 часа)</h3>
+                        <ol>
+                            <li><span class="num">1</span>
+                                <div><strong>Colosseo (вход по слоту)</strong> — аудиогид по желанию.</div>
+                            </li>
+                            <li><span class="num">2</span>
+                                <div><strong>Arco di Costantino</strong> — фото-точка.</div>
+                            </li>
+                            <li><span class="num">3</span>
+                                <div><strong>Roman Forum</strong> — по основным руинам и табличкам.</div>
+                            </li>
+                            <li><span class="num">4</span>
+                                <div><strong>Palatino</strong> — смотровые на Форум.</div>
+                            </li>
+                            <li><span class="num">5</span>
+                                <div><strong>Кофе/ланч</strong> — рядом с Форумом (см. «Где поесть»).</div>
+                            </li>
+                        </ol>
+                        <p class="muted">Лайфхак: комбинированный билет «Колизей + Форум + Палатин» с тайм-слотом на
+                            Колизей утром.</p>
+                    </div>
+
+                    <div class="card route">
+                        <h3 class="title">Маршрут дня: Ватикан (≈ 3–4 км, 3–5 часов)</h3>
+                        <ol>
+                            <li><span class="num">A</span>
+                                <div><strong>Piazza San Pietro</strong> — колоннада Бернини.</div>
+                            </li>
+                            <li><span class="num">B</span>
+                                <div><strong>Basilica di San Pietro</strong> — вход бесплатный; подъём на купол по
+                                    желанию (~€8–10/чел).
+                                </div>
+                            </li>
+                            <li><span class="num">C</span>
+                                <div><strong>Vatican Museums</strong> (по желанию) — бронь онлайн. Финал: Сикстинская
+                                    капелла.
+                                </div>
+                            </li>
+                            <li><span class="num">D</span>
+                                <div><strong>Castel Sant’Angelo (снаружи)</strong> — фото у моста.</div>
+                            </li>
+                        </ol>
+                        <p class="muted">Если музеи не планируем, лучше оставить больше времени на купол и прогулку по
+                            набережной Тибра.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="title">Где поесть (≈ €90–130/двоих за день)</h3>
+                        <ul class="list muted">
+                            <li><strong>Завтрак:</strong> <em>Panella – L’Arte del Pane</em> (рядом с Vittorio Emanuele)
+                                — кофе + корнетто (~€10–14).
+                            </li>
+                            <li><strong>Ланч у Форума:</strong> <em>La Prezzemolina</em> (пицца al taglio) или <em>La
+                                Taverna dei Fori Imperiali</em> (паста) (~€25–40).
+                            </li>
+                            <li><strong>Перекус у Ватикана:</strong> <em>Pizzarium Bonci</em> (легендарная пицца) или
+                                <em>Pastasciutta</em> (быстрая паста) (~€18–28).
+                            </li>
+                            <li><strong>Джелато:</strong> <em>Old Bridge Gelateria</em> у Ватикана (~€6–10).</li>
+                            <li><strong>Перед вылетом:</strong> лёгкий ужин/панини по дороге в аэропорт/на вокзал
+                                (~€20–30).
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="title">Итоги дня — расходы (на двоих)</h3>
+                        <div class="totals">
+                            <div class="totals-row"><span class="label">Билет: Колизей + Форум + Палатин</span><span>~€40–60</span>
+                            </div>
+                            <div class="totals-row"><span
+                                    class="label">Купол Св. Петра (по желанию)</span><span>~€16–20</span></div>
+                            <div class="totals-row"><span class="label">Ватиканские музеи (по желанию)</span><span>~€40–60</span>
+                            </div>
+                            <div class="totals-row"><span class="label">Питание (день)</span><span>~€90–130</span></div>
+                            <div class="totals-row"><span
+                                    class="label">Транспорт (метро/автобус)</span><span>~€8–12</span></div>
+                            <div class="totals-row"><span
+                                    class="label">Перелёт Рим → Вена (поздний) / поезд</span><span>~€120–300</span>
+                            </div>
+                            <div class="totals-row"><span class="label">Непредвиденные расходы</span><span>€0–100</span>
+                            </div>
+                            <div class="totals-row total"><span>Итого за день</span><span>≈ €314 – 682</span></div>
+                            <small>Диапазоны зависят от выбора музеев/перелёта. Можно удешевить, пропустив музеи и
+                                выбрав ранний лоукост.</small>
+                        </div>
+                    </div>
+                </div>
+
+                <aside>
+                    <div class="card">
+                        <h3 class="title">Карта: Античный Рим (утро)</h3>
+                        <div id="map-day5-center"></div>
+                        <p class="map-hint">Колизей → Арка Константина → Форум → Палатин → ланч.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="title">Карта: Ватикан (день)</h3>
+                        <div id="map-day5-vatican"></div>
+                        <p class="map-hint">Площадь/Собор → Музеи (по желанию) → Кастель Сант’Анджело. Зеленые пины —
+                            еда.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="title">Быстрые ссылки</h3>
+                        <ul class="list muted">
+                            <li><a class="link" href="https://www.coopculture.it/en/" target="_blank" rel="noreferrer">Колизей/Форум
+                                — билеты</a></li>
+                            <li><a class="link" href="https://www.museivaticani.va/" target="_blank" rel="noreferrer">Ватиканские
+                                музеи</a></li>
+                            <li><a class="link" href="https://www.atac.roma.it/" target="_blank" rel="noreferrer">Транспорт
+                                в Риме (ATAC)</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+
+        <!-- DAY 6 -->
+        <section id="day6">
+            <div class="grid">
+                <div>
+                    <div class="card">
+                        <h2 class="title">День 6 — Вена → (коротко) Мюнхен → вечерний перелет в Амстердам</h2>
+                        <ul class="list muted">
+                            <li><strong>1 апреля 2026 (среда)</strong></li>
+                            <li>🛏 Ночь Дня 5: сон в Вене. Утром — быстрый обзор центра и Шёнбрунна.</li>
+                            <li>🚆 Днём поезд: Railjet/EC Wien Hbf → München Hbf (≈ 4 ч 3 мин, ~€60–120/двое).</li>
+                            <li>🌃 Вечер: короткая прогулка и ужин в Мюнхене (без ночёвки).</li>
+                            <li>✈️/🚆 Поздний вылет/выезд: Мюнхен → Амстердам (прилет/прибытие поздно вечером/ночью).
+                                Ночёвка — Амстердам. (~€100–160)
+                            </li>
+                            <img src="images/hotels_6.png" class="photo" alt="">
+                        </ul>
+                    </div>
+
+                    <div class="card route">
+                        <h3 class="title">Вена — маршрут до обеда (≈ 6–7 км, 4–5 ч)</h3>
+                        <ol>
+                            <li><span class="num">1</span>
+                                <div><strong>Stephansplatz</strong> — собор Св. Стефана.</div>
+                            </li>
+                            <li><span class="num">2</span>
+                                <div><strong>Graben → Kohlmarkt</strong> — к Хофбургу.</div>
+                            </li>
+                            <li><span class="num">3</span>
+                                <div><strong>Hofburg</strong> — внешний осмотр.</div>
+                            </li>
+                            <li><span class="num">4</span>
+                                <div><strong>Ringstraße</strong> — Опера/Ратуша (по пути).</div>
+                            </li>
+                            <li><span class="num">5</span>
+                                <div><strong>Naschmarkt</strong> — ланч.</div>
+                            </li>
+                            <li><span class="num">6</span>
+                                <div><strong>Schönbrunn</strong> — сад и фасад (60–90 мин).</div>
+                            </li>
+                            <li><span class="num">7</span>
+                                <div><strong>Wien Hbf</strong> — поезд на Мюнхен.</div>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="card route">
+                        <h3 class="title">Мюнхен (вечер, 2–3 ч, без ночёвки)</h3>
+                        <ol>
+                            <li><span class="num">A</span>
+                                <div><strong>München Hbf</strong> — прибытие, пересадка на S-Bahn.</div>
+                            </li>
+                            <li><span class="num">B</span>
+                                <div><strong>Marienplatz</strong> — ратуша.</div>
+                            </li>
+                            <li><span class="num">C</span>
+                                <div><strong>Viktualienmarkt</strong> — быстрый перекус.</div>
+                            </li>
+                            <li><span class="num">D</span>
+                                <div><strong>Hofbräuhaus / Augustiner</strong> — ужин и пиво.</div>
+                            </li>
+                            <li><span class="num">E</span>
+                                <div><strong>Englischer Garten (вход)</strong> — если есть силы.</div>
+                            </li>
+                        </ol>
+
+                        <p class="muted">Дальше — в аэропорт/на ночной поезд.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="title">Логистика Мюнхен → Амстердам</h3>
+                        <ul class="list muted">
+                            <li><strong>✈️ Самолёт (быстрее):</strong> MUC → AMS поздним вылетом (обычно 1:30–1:40 в
+                                воздухе + дорога в аэропорт). Ночёвка — Амстердам.
+                            </li>
+                            <li><strong>🚆 Поезд (дольше):</strong> вечерний ICE/IC с 1–2 пересадками → прибытие после
+                                полуночи/под утро. Ночёвка — Амстердам.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="title">Где поесть (≈ €90–120/двоих за день)</h3>
+                        <ul class="list muted">
+                            <li><strong>Вена (завтрак):</strong> кофе + штрудель рядом с размещением (~€12–18).</li>
+                            <li><strong>Вена (ланч):</strong> Naschmarkt — уличные закуски/азиатская кухня (~€25–40).
+                            </li>
+                            <li><strong>Мюнхен (ужин):</strong> Hofbräuhaus или Augustiner — шницель/колбаски + пиво
+                                (~€45–60).
+                            </li>
+                            <li><strong>Перекусы/вода в дороге:</strong> ~€6–12.</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="title">Итоги дня — расходы (на двоих)</h3>
+                        <div class="totals">
+                            <div class="totals-row"><span class="label">Поезд: Вена → Мюнхен</span><span>~€60–120</span>
+                            </div>
+                            <div class="totals-row"><span class="label">Питание (день)</span><span>~€90–120</span></div>
+                            <div class="totals-row"><span class="label">Городской транспорт (Вена+Мюнхен)</span><span>~€12–20</span>
+                            </div>
+                            <div class="totals-row"><span class="label">Перелёт/поезд: Мюнхен → Амстердам</span><span>✈️ ~€140–280 · 🚆 ~€120–220</span>
+                            </div>
+                            <div class="totals-row"><span class="label">Проживание (Амстердам, 1 ночь)</span><span>~€100–160</span>
+                            </div>
+                            <div class="totals-row"><span class="label">Непредвиденные</span><span>€0–80</span></div>
+                            <div class="totals-row total"><span>Итого за день</span><span>≈ €402 – 700</span></div>
+                            <small>Ночёвка в Амстердаме, чтобы утром Дня 7 сразу начать прогулку.</small>
+                        </div>
+                    </div>
+
+                </div>
+
+                <aside>
+                    <div class="card">
+                        <h3 class="title">Карта: Вена (центр → Шёнбрунн)</h3>
+                        <div id="map-day6-vienna"></div>
+                        <p class="map-hint">Stephansplatz → Hofburg → Ringstraße → Naschmarkt → Schönbrunn → Wien
+                            Hbf.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="title">Карта: Мюнхен (вечер)</h3>
+                        <div id="map-day6-munich"></div>
+                        <p class="map-hint">Hbf → Marienplatz → Viktualienmarkt → Hofbräuhaus.</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+
+        <!-- DAY 7 -->
+        <section id="day7">
+            <div class="grid">
+                <div>
+                    <div class="card">
+                        <h2 class="title">День 7 — Амстердам → Париж (вечером/ночью)</h2>
+                        <ul class="list muted">
+                            <li><strong>2 апреля 2026 (четверг)</strong></li>
+                            <li>🛏 Ночь Дня 6: Амстердам (уже заселены).</li>
+                            <li>🚶 День: прогулка по центру + каналы / музеи (по желанию).</li>
+                            <li>🚆 Вечером: поезд Eurostar/Thalys Amsterdam Centraal → Paris Gare du Nord (≈ 3 ч 20 м,
+                                ~€160–220/двое).
+                            </li>
+                            <li>🏨 Ночёвка: Париж (≈ €120–180).</li>
+                            <img src="images/hotels_7.png" class="photo" alt="">
+                        </ul>
+                    </div>
+
+                    <div class="card route">
+                        <h3 class="title">Маршрут по Амстердаму (≈ 6–8 км, 5–6 часов)</h3>
+                        <ol>
+                            <li><span class="num">1</span>
+                                <div><strong>Dam Square</strong> — старт и ориентир.</div>
+                            </li>
+                            <li><span class="num">2</span>
+                                <div><strong>Jordaan</strong> — атмосфера каналов.</div>
+                            </li>
+                            <li><span class="num">3</span>
+                                <div><strong>Anne Frank Huis</strong> — осмотр снаружи (внутрь по брони).</div>
+                            </li>
+                            <li><span class="num">4</span>
+                                <div><strong>De 9 Straatjes</strong> — кофе и небольшие магазины.</div>
+                            </li>
+                            <li><span class="num">5</span>
+                                <div><strong>Bloemenmarkt</strong> — плавучий рынок цветов.</div>
+                            </li>
+                            <li><span class="num">6</span>
+                                <div><strong>Rijksmuseum / Van Gogh</strong> — один музей по желанию.</div>
+                            </li>
+                            <li><span class="num">7</span>
+                                <div><strong>Vondelpark</strong> — короткая пауза в парке.</div>
+                            </li>
+                            <li><span class="num">8</span>
+                                <div><strong>Amsterdam Centraal</strong> — поезд в Париж.</div>
+                            </li>
+                        </ol>
+                        <p class="muted">По времени удобно: музей до 2 ч, круиз по каналам — ~1 ч (см. ниже).</p>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="title">Где поесть (≈ €100–130/двоих за день)</h3>
+                        <ul class="list muted">
+                            <li><strong>Завтрак:</strong> <em>Winkel 43</em> (яблочный пирог) или кафе в Jordaan
+                                (~€16–22).
+                            </li>
+                            <li><strong>Ланч:</strong> <em>Foodhallen</em> (стритфуд, большой выбор) (~€30–45).</li>
+                            <li><strong>Кофе/сладкое:</strong> <em>Van Wonderen Stroopwafels</em> (~€8–12).</li>
+                            <li><strong>Ранний ужин:</strong> индонезийский <em>Restaurant Blauw</em> или <em>Sama
+                                Sebo</em> (~€38–55).
+                            </li>
+                            <li><strong>По желанию:</strong> круиз по каналам (~€40 на двоих).</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="title">Итоги дня — расходы (на двоих)</h3>
+                        <div class="totals">
+                            <div class="totals-row"><span class="label">Питание</span><span>~€100–130</span></div>
+                            <div class="totals-row"><span class="label">Круиз по каналам (опция)</span><span>~€40</span>
+                            </div>
+                            <div class="totals-row"><span class="label">Музей (1, опция)</span><span>~€40–60</span>
+                            </div>
+                            <div class="totals-row"><span class="label">Городской транспорт</span><span>~€10–15</span>
+                            </div>
+                            <div class="totals-row"><span
+                                    class="label">Поезд: Амстердам → Париж</span><span>~€160–220</span></div>
+                            <div class="totals-row"><span class="label">Проживание (Париж)</span><span>~€120–180</span>
+                            </div>
+                            <div class="totals-row"><span class="label">Непредвиденные</span><span>€0–80</span></div>
+                            <div class="totals-row total"><span>Итого за день</span><span>≈ €430 – 725</span></div>
+                            <small>Сэкономить можно, отказавшись от музея и выбрав ранний ланч вместо ужина.</small>
+                        </div>
+                    </div>
+                </div>
+
+                <aside>
+                    <div class="card">
+                        <h3 class="title">Карта: Амстердам (день)</h3>
+                        <div id="map-day7-amsterdam"></div>
+                        <p class="map-hint">Dam → Jordaan → Anne Frank → 9 Straatjes → Bloemenmarkt → Rijks/Van Gogh →
+                            Vondelpark → Centraal. Зеленые пины — еда.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="title">Быстрые ссылки</h3>
+                        <ul class="list muted">
+                            <li><a class="link" href="https://www.gvb.nl/en" target="_blank" rel="noreferrer">GVB —
+                                транспорт Амстердама</a></li>
+                            <li><a class="link" href="https://www.rijksmuseum.nl/en/tickets" target="_blank"
+                                   rel="noreferrer">Rijksmuseum — билеты</a></li>
+                            <li><a class="link" href="https://www.eurostar.com/" target="_blank" rel="noreferrer">Eurostar/Thalys
+                                — поезда в Париж</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- DAY 8 -->
+        <section id="day8">
+            <div class="grid">
+                <div>
+                    <div class="card">
+                        <h2 class="title">День 8 — Париж → Лион</h2>
+                        <ul class="list muted">
+                            <li><strong>3 апреля 2026 (пятница)</strong></li>
+                            <li>🚶 Утро: «лайт-Париж» — центр и фото-точки.</li>
+                            <li>🚅 Днём: TGV Paris (Gare de Lyon) → Lyon Part-Dieu (≈ 2 ч, ~€100–150/двое).</li>
+                            <li>🍴 Ранний ужин: bouchon в Лионе.</li>
+                        </ul>
+                    </div>
+
+                    <div class="card route">
+                        <h3 class="title">Париж утром (≈ 5–6 км, 4–5 часов)</h3>
+                        <ol>
+                            <li><span class="num">1</span>
+                                <div><strong>Notre-Dame (снаружи)</strong> — старт на Île de la Cité.</div>
+                            </li>
+                            <li><span class="num">2</span>
+                                <div><strong>Sainte-Chapelle</strong> (по желанию, быстрый визит).</div>
+                            </li>
+                            <li><span class="num">3</span>
+                                <div><strong>Louvre (двор и пирамида)</strong> — фото-стоп.</div>
+                            </li>
+                            <li><span class="num">4</span>
+                                <div><strong>Tuileries → Place de la Concorde</strong> — прогулка по саду.</div>
+                            </li>
+                            <li><span class="num">5</span>
+                                <div><strong>Arc de Triomphe</strong> — короткий заход (подъём по желанию).</div>
+                            </li>
+                            <li><span class="num">6</span>
+                                <div><strong>Метро к Gare de Lyon</strong> — посадка на TGV в Лион.</div>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="card route">
+                        <h3 class="title">Лион (ночь, 2–3 часа)</h3>
+                        <ol>
+                            <li><span class="num">A</span>
+                                <div><strong>Place Bellecour</strong> — центр.</div>
+                            </li>
+                            <li><span class="num">B</span>
+                                <div><strong>Vieux Lyon</strong> — улочки и трабулли.</div>
+                            </li>
+                            <li><span class="num">C</span>
+                                <div><strong>Cathédrale Saint-Jean</strong> — фотостоп.</div>
+                            </li>
+                            <li><span class="num">D</span>
+                                <div><strong>Bouchon lyonnais</strong> — ужин перед вылетом.</div>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="title">Где поесть</h3>
+                        <ul class="list muted">
+                            <li><strong>Париж (завтрак):</strong> булочная рядом с отелем — круассан + café (~€10–16).
+                            </li>
+                            <li><strong>Париж (ранний ланч):</strong> <em>Bouillon Chartier</em> или <em>L’As du
+                                Fallafel</em> (~€25–40).
+                            </li>
+                            <li><strong>Лион (ужин):</strong> bouchon — quenelles, salade lyonnaise (~€45–65/двоих).
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="title">Итоги дня — расходы (на двоих)</h3>
+                        <div class="totals">
+                            <div class="totals-row"><span class="label">Питание (день)</span><span>~€110–140</span>
+                            </div>
+                            <div class="totals-row"><span
+                                    class="label">Транспорт: Париж (метро/RER)</span><span>~€12–18</span></div>
+                            <div class="totals-row"><span class="label">TGV: Париж → Лион</span><span>~€100–150</span>
+                            </div>
+                            <div class="totals-row"><span
+                                    class="label">Перелёт: Лион → Подгорица</span><span>~€180–260</span></div>
+                            <div class="totals-row"><span class="label">Непредвиденные</span><span>€0–80</span></div>
+                            <div class="totals-row total"><span>Итого за день</span><span>≈ €402 – 648</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <aside>
+                    <div class="card">
+                        <h3 class="title">Карта: Париж (утро)</h3>
+                        <div id="map-day8-paris"></div>
+                        <p class="map-hint">Notre-Dame → Sainte-Chapelle → Louvre → Tuileries → Concorde → Arc de
+                            Triomphe → Gare de Lyon.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="title">Карта: Лион (вечер)</h3>
+                        <div id="map-day8-lyon"></div>
+                        <p class="map-hint">Bellecour → Vieux Lyon → Saint-Jean → bouchon. Зеленые пины — еда.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="title">Быстрые ссылки</h3>
+                        <ul class="list muted">
+                            <li><a class="link" href="https://www.sncf-connect.com/en-en/" target="_blank"
+                                   rel="noreferrer">SNCF — билеты TGV</a></li>
+                            <li><a class="link" href="https://www.ratp.fr/en" target="_blank" rel="noreferrer">RATP —
+                                транспорт Парижа</a></li>
+                            <li><a class="link" href="https://www.lyon-france.com/" target="_blank" rel="noreferrer">Lyon
+                                — официальная инфо</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- TRIP SUMMARY -->
+        <section id="summary">
+            <div class="card">
+                <h2 class="title">Итоги путешествия — расходы (на двоих)</h2>
+
+                <div class="totals" style="margin-top:8px">
+                    <div class="totals-row"><span
+                            class="label">День 1 — Подгорица → Любляна</span><span>≈ €294 – 428</span></div>
+                    <div class="totals-row"><span class="label">День 2 — Любляна → Блед → Венеция</span><span>≈ €344 – 494</span>
+                    </div>
+                    <div class="totals-row"><span
+                            class="label">День 3 — Венеция → Флоренция</span><span>≈ €326 – 520</span></div>
+                    <div class="totals-row"><span class="label">День 4 — Флоренция → Рим</span><span>≈ €298 – 484</span>
+                    </div>
+                    <div class="totals-row"><span class="label">День 5 — Рим → Вена</span><span>≈ €314 – 682</span>
+                    </div>
+                    <div class="totals-row"><span class="label">День 6 — Вена → Мюнхен → Амстердам</span><span>≈ €402 – 700</span>
+                    </div>
+                    <div class="totals-row"><span
+                            class="label">День 7 — Амстердам → Париж</span><span>≈ €430 – 725</span></div>
+                    <div class="totals-row"><span class="label">День 8 — Париж → Лион</span><span>≈ €402 – 648</span>
+                    </div>
+
+                    <div class="totals-row total">
+                        <span>Сумма за всю поездку</span>
+                        <span>≈ <strong>€2,810 – €4,681</strong></span>
+                    </div>
+                </div>
+
+                <ul class="list muted">
+                    <li><strong>Средний прогноз:</strong> ~ <strong>€3,746</strong> (входит в наш бюджет €4,000).</li>
+                    <li><strong>Запас до бюджета (средний сценарий):</strong> ~€255.</li>
+                    <li><strong>Если всё пройдёт по минимуму:</strong> сэкономим ~€1,190; <strong>по
+                        максимуму:</strong> потребуется +€681 сверх бюджета.
+                    </li>
+                    <li class="muted">Диапазоны включают «непредвиденные» из ежедневных расчетов и опциональные
+                        активности
+                        (музеи/каналы/подъёмы).
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
