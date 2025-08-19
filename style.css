@@ -218,87 +218,110 @@ main > section.active { display: block; }
 
 /* EXTREME iPhone Toolbar */
 @media (max-width: 430px) {
-  :root { --toolbar-h: 44px; --toolbar-pad-x: 12px; --tabs-h: 40px; }
-  .wrap { padding-top: 0; }
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    min-height: calc(var(--toolbar-h) + env(safe-area-inset-top));
-    padding: calc(env(safe-area-inset-top)) var(--toolbar-pad-x) 0;
-    background: rgba(251,252,255,.92);
-    backdrop-filter: saturate(1.1) blur(8px);
-    -webkit-backdrop-filter: saturate(1.1) blur(8px);
-    border-bottom: 1px solid var(--ring);
-  }
-  header h1 {
-    font-size: 17px;
-    line-height: 1;
-    margin: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  header p, .chips { display: none !important; }
-  nav.grid {
-    position: sticky;
-    top: calc(var(--toolbar-h) + env(safe-area-inset-top));
-    z-index: 45;
-    display: flex !important;
-    flex-wrap: nowrap;
-    gap: 8px;
-    padding: 6px var(--toolbar-pad-x);
-    margin: 0;
-    height: var(--tabs-h);
-    align-items: center;
-    overflow-x: auto;
-    overflow-y: hidden;
-    background: rgba(251,252,255,.92);
-    backdrop-filter: saturate(1.1) blur(8px);
-    -webkit-backdrop-filter: saturate(1.1) blur(8px);
-    border-bottom: 1px solid var(--ring);
-    box-shadow: none;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-  nav.grid::-webkit-scrollbar { display: none; }
-  nav a {
-    flex: 0 0 auto;
-    display: inline-block;
-    padding: 8px 10px;
-    border-radius: 999px;
-    font-size: 13px;
-    line-height: 1;
-    background: #fff;
-    border: 1px solid var(--ring);
-    box-shadow: none;
-  }
-  nav a small {
-    display: inline;
-    font-size: 11px;
-    margin-left: 6px;
-    color: var(--muted);
-  }
-  nav a:hover { transform: translateY(0); }
-  nav a.active {
-    background: #111827;
-    color: #fff;
-    border-color: #111827;
-  }
-  nav a.active small { color: #cbd5e1; }
-  main { margin-top: 8px; }
-  .grid { gap: 12px; margin-top: 12px; }
-  .card { border-radius: 14px; padding: 14px; box-shadow: 0 6px 20px var(--shadow); }
-  img.photo { border-radius: 10px; margin-top: 8px; box-shadow: 0 3px 10px rgba(0,0,0,.06); }
-  [id^="map-day"] { height: clamp(240px, 38vh, 360px); border-radius: 12px; }
-  #map-day2-bled, #map-day2-venice, #map-day3-venice { height: 260px; }
+    :root { --toolbar-h: 44px; --toolbar-pad-x: 12px; --tabs-h: 40px; }
+    .wrap { padding-top: 0; }
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        min-height: calc(var(--toolbar-h) + env(safe-area-inset-top));
+        padding: calc(env(safe-area-inset-top)) var(--toolbar-pad-x) 0;
+        background: rgba(251,252,255,.92);
+        backdrop-filter: saturate(1.1) blur(8px);
+        -webkit-backdrop-filter: saturate(1.1) blur(8px);
+        border-bottom: 1px solid var(--ring);
+    }
+    header h1 {
+        font-size: 17px;
+        line-height: 1;
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    header p { display: none !important; }
+    @media (max-width: 430px) {
+        .chips {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            gap: 6px;
+            margin-top: 6px;
+            padding-bottom: 4px;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+        .chips::-webkit-scrollbar { display: none; }
+
+        .chip {
+            flex: 0 0 auto;
+            font-size: 11px;
+            padding: 4px 8px;
+            white-space: nowrap;
+        }
+
+    }
+
+    nav.grid {
+        position: sticky;
+        top: calc(var(--toolbar-h) + env(safe-area-inset-top));
+        z-index: 45;
+        display: flex !important;
+        flex-wrap: nowrap;
+        gap: 8px;
+        padding: 6px var(--toolbar-pad-x);
+        margin: 0;
+        height: var(--tabs-h);
+        align-items: center;
+        overflow-x: auto;
+        overflow-y: hidden;
+        background: rgba(251,252,255,.92);
+        backdrop-filter: saturate(1.1) blur(8px);
+        -webkit-backdrop-filter: saturate(1.1) blur(8px);
+        border-bottom: 1px solid var(--ring);
+        box-shadow: none;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    nav.grid::-webkit-scrollbar { display: none; }
+    nav a {
+        flex: 0 0 auto;
+        display: inline-block;
+        padding: 8px 10px;
+        border-radius: 999px;
+        font-size: 13px;
+        line-height: 1;
+        background: #fff;
+        border: 1px solid var(--ring);
+        box-shadow: none;
+    }
+    nav a small {
+        display: inline;
+        font-size: 11px;
+        margin-left: 6px;
+        color: var(--muted);
+    }
+    nav a:hover { transform: translateY(0); }
+    nav a.active {
+        background: #111827;
+        color: #fff;
+        border-color: #111827;
+    }
+    nav a.active small { color: #cbd5e1; }
+    main { margin-top: 8px; }
+    .grid { gap: 12px; margin-top: 12px; }
+    .card { border-radius: 14px; padding: 14px; box-shadow: 0 6px 20px var(--shadow); }
+    img.photo { border-radius: 10px; margin-top: 8px; box-shadow: 0 3px 10px rgba(0,0,0,.06); }
+    [id^="map-day"] { height: clamp(240px, 38vh, 360px); border-radius: 12px; }
+    #map-day2-bled, #map-day2-venice, #map-day3-venice { height: 260px; }
 }
 
 @supports (height: 100svh) {
-  @media (max-width: 430px) {
-    [id^="map-day"] { height: clamp(220px, 36svh, 340px); }
-  }
+    @media (max-width: 430px) {
+        [id^="map-day"] { height: clamp(220px, 36svh, 340px); }
+    }
 }
