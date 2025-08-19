@@ -325,3 +325,18 @@ main > section.active { display: block; }
         [id^="map-day"] { height: clamp(220px, 36svh, 340px); }
     }
 }
+
+.scroll-title {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    animation: scroll-text 12s linear infinite;
+}
+
+@keyframes scroll-text {
+    0%   { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+
