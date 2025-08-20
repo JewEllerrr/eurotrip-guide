@@ -2,6 +2,21 @@
 const tabs = document.querySelectorAll('nav a[data-day]');
 const sections = [...document.querySelectorAll('main section')];
 
+const iconFood = L.icon({
+    iconUrl: 'https://maps.gstatic.com/mapfiles/ms2/micons/restaurant.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    popupAnchor: [0, -28],
+});
+
+const iconHotel = L.icon({
+    iconUrl: 'https://maps.gstatic.com/mapfiles/ms2/micons/lodging.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    popupAnchor: [0, -28],
+});
+
+
 const mapInits = {
     day1: initDay1Map,
     day2: initDay2Map,
@@ -37,7 +52,6 @@ document.querySelectorAll('.chip[data-day]').forEach(chip => {
     });
 });
 
-
 document.addEventListener('DOMContentLoaded', () => {
     const fromHash = location.hash.replace('#', '');
     const initial = sections.some(s => s.id === fromHash) ? fromHash : 'day1';
@@ -50,16 +64,36 @@ function initDay1Map() {
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19}).addTo(map);
 
     const points = [
-        {n: 1, name: "Хостел (Miklošičeva 9)", lat: 46.0536, lng: 14.5064},
-        {n: 2, name: "Площадь Прешерна", lat: 46.0511, lng: 14.5065},
-        {n: 3, name: "Тройной мост", lat: 46.0510, lng: 14.5075},
-        {n: 4, name: "Мост Драконов", lat: 46.0516, lng: 14.5094},
-        {n: 5, name: "Фуникулёр к замку", lat: 46.0489, lng: 14.5099},
-        {n: 6, name: "Люблянский замок", lat: 46.0477, lng: 14.5094},
-        {n: 7, name: "Старый город (Mestni trg)", lat: 46.0503, lng: 14.5079},
-        {n: 8, name: "Набережная реки", lat: 46.0507, lng: 14.5085},
-        {n: 9, name: "Парк Тиволи", lat: 46.0560, lng: 14.4949},
+        {n: 1, name: "Хостел Ibis Styles Ljubljana Centre", lat: 46.055538, lng: 14.5074779},
+        {n: 2, name: "Площадь Прешерна", lat: 46.051424, lng: 14.505995},
+        {n: 3, name: "Тройной мост", lat: 46.051088, lng: 14.506245},
+        {n: 4, name: "Мост Драконов", lat: 46.051938, lng: 14.510426},
+        {n: 5, name: "Фуникулёр к замку (нижняя станция)", lat: 46.050179956075354, lng: 14.509708519883791},
+        {n: 6, name: "Люблянский замок", lat: 46.04900486702223, lng: 14.508350216268578},
+        {n: 7, name: "Старый город (Mestni trg)", lat: 46.050072646381345, lng: 14.50678379238868},
+        {n: 8, name: "Парк Звезда", lat: 46.050211, lng: 14.503798},
+        {n: 9, name: "Парк Тиволи (Jakopič Promenade)", lat: 46.053678, lng: 14.497527},
     ];
+
+    const route = L.polyline(points.map(p => [p.lat, p.lng]), {
+        color: '#2563eb',
+        weight: 4,
+        opacity: 0.85
+    }).addTo(map);
+
+    points.forEach(p => {
+        const divIcon = L.divIcon({
+            html: `<div class="num">${p.n}</div>`,
+            className: '',
+            iconSize: [26, 26],
+            iconAnchor: [13, 13]
+        });
+        L.marker([p.lat, p.lng], {icon: divIcon})
+            .addTo(map)
+            .bindPopup(`<strong>${p.n}. ${p.name}</strong>`);
+    });
+
+
     const food = [
         {name: "Gostilna Sokol", lat: 46.0508, lng: 14.5066},
         {name: "Druga Violina", lat: 46.0489, lng: 14.5082},
@@ -67,40 +101,39 @@ function initDay1Map() {
         {name: "Central Market Street Food", lat: 46.0518, lng: 14.5091},
     ];
 
-    const route = L.polyline(points.map(p => [p.lat, p.lng]), {color: '#2563eb', weight: 4, opacity: .85}).addTo(map);
+    const hotels = [
+        {name: "Hostel Ibis Styles Ljubljana Centre", lat: 46.055538, lng: 14.5074779},
+        {name: "Hotel Emonec", lat: 46.0506, lng: 14.5048},
+        {name: "Hostel Tresor", lat: 46.0513, lng: 14.5055},
+        {name: "B&B Hotel Ljubljana Park", lat: 46.0577, lng: 14.5136},
+        {name: "Hotel Medno", lat: 46.0984, lng: 14.4247},
+    ];
 
-    const iconFood = L.icon({
-        iconUrl: 'https://cdn.jsdelivr.net/gh/pointhi/leaflet-color-markers/img/marker-icon-2x-green.png',
-        iconSize: [25, 41], iconAnchor: [12, 41],
-        shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
-        shadowSize: [41, 41]
-    });
+    food.forEach(f =>
+        L.marker([f.lat, f.lng], {icon: iconFood})
+            .addTo(map)
+            .bindPopup(`<strong>${f.name}</strong>`)
+    );
 
-    points.forEach(p => {
-        const divIcon = L.divIcon({
-            html: `<div class="num">${p.n}</div>`,
-            className: '',
-            iconSize: [26, 26], iconAnchor: [13, 13]
-        });
-        L.marker([p.lat, p.lng], {icon: divIcon}).addTo(map).bindPopup(`<strong>${p.n}. ${p.name}</strong>`);
-    });
 
-    food.forEach(f => L.marker([f.lat, f.lng], {icon: iconFood}).addTo(map).bindPopup(`<strong>${f.name}</strong>`));
+    hotels.forEach(h =>
+        L.marker([h.lat, h.lng], {icon: iconHotel})
+            .addTo(map)
+            .bindPopup(`<strong>${h.name}</strong>`)
+    );
 
-    map.fitBounds(route.getBounds(), {padding: [18, 18]});
+    const allPoints = [
+        ...points.map(p => [p.lat, p.lng]),
+        ...food.map(f => [f.lat, f.lng]),
+        ...hotels.map(h => [h.lat, h.lng])
+    ];
+
     setTimeout(() => map.invalidateSize(), 50);
 }
 
+
 // ---------------- DAY 2 ----------------
 function initDay2Map() {
-    // Общая иконка для еды (зелёный пин)
-    const iconFood = L.icon({
-        iconUrl: 'https://cdn.jsdelivr.net/gh/pointhi/leaflet-color-markers/img/marker-icon-2x-green.png',
-        iconSize: [25, 41], iconAnchor: [12, 41],
-        shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
-        shadowSize: [41, 41]
-    });
-
     // ---------- Bled ----------
     const bled = L.map('map-day2-bled', {scrollWheelZoom: true}).setView([46.363, 14.093], 13);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19}).addTo(bled);
@@ -191,7 +224,6 @@ function initDay3Map() {
             {n: 5, name: 'Stazione Venezia Santa Lucia (возврат)', lat: 45.4410, lng: 12.3217},
         ];
 
-        // еда/кофе в Венеции (завтрак)
         const venFood = [
             {name: 'Caffè del Doge (завтрак)', lat: 45.4370, lng: 12.3370},
             {name: 'Torrefazione Cannaregio (альтернатива)', lat: 45.4446, lng: 12.3277},
@@ -203,15 +235,6 @@ function initDay3Map() {
             opacity: .85
         }).addTo(ven);
 
-        // иконка зелёного пина
-        const iconFood = L.icon({
-            iconUrl: 'https://cdn.jsdelivr.net/gh/pointhi/leaflet-color-markers/img/marker-icon-2x-green.png',
-            iconSize: [25, 41], iconAnchor: [12, 41],
-            shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
-            shadowSize: [41, 41]
-        });
-
-        // маркеры маршрута
         venPoints.forEach(p => {
             const divIcon = L.divIcon({
                 html: `<div class="num">${p.n}</div>`,
@@ -221,7 +244,6 @@ function initDay3Map() {
             });
             L.marker([p.lat, p.lng], {icon: divIcon}).addTo(ven).bindPopup(`<strong>${p.n}. ${p.name}</strong>`);
         });
-        // маркеры еды
         venFood.forEach(f => L.marker([f.lat, f.lng], {icon: iconFood}).addTo(ven).bindPopup(`<strong>${f.name}</strong>`));
 
         // fitBounds по всем точкам
@@ -261,13 +283,6 @@ function initDay3Map() {
             weight: 4,
             opacity: 0.85
         }).addTo(map);
-
-        const iconFood = L.icon({
-            iconUrl: 'https://cdn.jsdelivr.net/gh/pointhi/leaflet-color-markers/img/marker-icon-2x-green.png',
-            iconSize: [25, 41], iconAnchor: [12, 41],
-            shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
-            shadowSize: [41, 41]
-        });
 
         points.forEach(p => {
             const divIcon = L.divIcon({
@@ -318,14 +333,6 @@ function initDay4Map() {
     // Маршрут
     const route = L.polyline(points.map(p => [p.lat, p.lng]), {color: '#2563eb', weight: 4, opacity: .85}).addTo(map);
 
-    // Иконка еды (зелёный пин)
-    const iconFood = L.icon({
-        iconUrl: 'https://cdn.jsdelivr.net/gh/pointhi/leaflet-color-markers/img/marker-icon-2x-green.png',
-        iconSize: [25, 41], iconAnchor: [12, 41],
-        shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
-        shadowSize: [41, 41]
-    });
-
     // Маркеры маршрута с номерами
     points.forEach(p => {
         const divIcon = L.divIcon({
@@ -354,13 +361,6 @@ function initDay4Map() {
 
 // ---------------- DAY 5 ----------------
 function initDay5Map() {
-    // Общая иконка еды (зелёный пин)
-    const iconFood = L.icon({
-        iconUrl: 'https://cdn.jsdelivr.net/gh/pointhi/leaflet-color-markers/img/marker-icon-2x-green.png',
-        iconSize: [25, 41], iconAnchor: [12, 41],
-        shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
-        shadowSize: [41, 41]
-    });
 
     // ===== Карта 1: Античный Рим (утро) =====
     const elCenter = document.getElementById('map-day5-center');
@@ -446,13 +446,6 @@ function initDay5Map() {
 
 // ---------------- DAY 6 ----------------
 function initDay6Map() {
-    const iconFood = L.icon({
-        iconUrl: 'https://cdn.jsdelivr.net/gh/pointhi/leaflet-color-markers/img/marker-icon-2x-green.png',
-        iconSize: [25, 41], iconAnchor: [12, 41],
-        shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
-        shadowSize: [41, 41]
-    });
-
     // ===== ВЕНА =====
     const elVie = document.getElementById('map-day6-vienna');
     if (elVie) {
@@ -564,13 +557,6 @@ function initDay7Map() {
 
     const route = L.polyline(points.map(p => [p.lat, p.lng]), {color: '#2563eb', weight: 4, opacity: .85}).addTo(map);
 
-    const iconFood = L.icon({
-        iconUrl: 'https://cdn.jsdelivr.net/gh/pointhi/leaflet-color-markers/img/marker-icon-2x-green.png',
-        iconSize: [25, 41], iconAnchor: [12, 41],
-        shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
-        shadowSize: [41, 41]
-    });
-
     points.forEach(p => {
         const divIcon = L.divIcon({
             html: `<div class="num">${p.n}</div>`,
@@ -589,13 +575,6 @@ function initDay7Map() {
 
 // ---------------- DAY 8 ----------------
 function initDay8Map() {
-    const iconFood = L.icon({
-        iconUrl: 'https://cdn.jsdelivr.net/gh/pointhi/leaflet-color-markers/img/marker-icon-2x-green.png',
-        iconSize: [25, 41], iconAnchor: [12, 41],
-        shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
-        shadowSize: [41, 41]
-    });
-
     // ===== Париж (утро) =====
     const elPar = document.getElementById('map-day8-paris');
     if (elPar) {
