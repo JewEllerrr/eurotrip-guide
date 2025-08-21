@@ -2,15 +2,15 @@ const css = (name, fallback = "") =>
     getComputedStyle(document.documentElement).getPropertyValue(name).trim() || fallback;
 
 const iconFood = L.icon({
-    iconUrl: 'https://maps.gstatic.com/mapfiles/ms2/micons/restaurant.png',
-    iconSize: [32, 32],
+    iconUrl: 'icons/food.png',
+    iconSize: [20, 20],
     iconAnchor: [16, 32],
     popupAnchor: [0, -28],
 });
 
 const iconHotel = L.icon({
-    iconUrl: 'https://maps.gstatic.com/mapfiles/ms2/micons/lodging.png',
-    iconSize: [32, 32],
+    iconUrl: 'icons/hotel.png',
+    iconSize: [20, 20],
     iconAnchor: [16, 32],
     popupAnchor: [0, -28],
 });
